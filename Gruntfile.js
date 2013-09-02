@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      all: ['js/main.js']
+      files: ['gruntfile.js', 'js/plugins/*.js', 'js/main.js']
     },
 
     concat: {
@@ -23,8 +23,9 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/plugins/*.js', 'js/plugins/**/*.js'],
-        dest: 'js/main.js'
+        files: {
+          'js/main.js': ['js/plugins/**/*.js']
+        }
       }
     },
 
@@ -54,4 +55,4 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'watch');
   grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
 
-}
+};

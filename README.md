@@ -1,6 +1,6 @@
 # FOX Boilerplate
 
-An HTML5 / Sass / Gruntjs Boilerplate including [FOX CSS](http://fox-css.com). Grunt tasks for now :
+An HTML5 / Sass / Gruntjs Boilerplate including [FOX CSS](http://fox-css.com). Grunt dependencies for now :
 
 * `grunt-contrib-compass`
 * `grunt-contrib-watch`

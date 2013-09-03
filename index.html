@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<!--[if lte IE 7]> <html class="ie7" lang="fr"> <![endif]-->
-<!--[if IE 8]> <html class="ie8" lang="fr"> <![endif]-->
-<!--[if IE 9]> <html class="ie9" lang="fr"> <![endif]-->
-<html lang="fr">
+<!--[if lte IE 7]> <html class="ie7 no-js" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
+<html lang="fr" class="no-js">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!-- Remove this if Modernizr is used -->
 	<script>
 	document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
 	</script>
@@ -14,8 +15,8 @@
     <meta name="viewport" content="initial-scale=1.0">
 	<link rel="stylesheet" href="css/fox.css">
 	<!--[if (gte IE 6)&(lte IE 8)]>
-    <script src="js/modernizr.js"></script>
-    <script src="js/respond-min.js"></script>
+    <script src="js/modernizr-html5-shiv.js"></script>
+    <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>

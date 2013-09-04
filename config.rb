@@ -1,6 +1,7 @@
 # General
 output_style = :expanded
 relative_assets = true
+line_comments = false
 project_path = File.dirname(__FILE__) + '/'
 env_file = project_path + 'environment.rb'
 add_import_path project_path + '../all/public/assets/styles/src/'

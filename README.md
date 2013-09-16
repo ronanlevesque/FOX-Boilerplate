@@ -26,11 +26,21 @@ And more to come.
 
 ## Usage
 
-FOX Boilerplate is designed to be as less obtrusive as possible. Just install the Grunt dependencies above and run the following commands depending on what you want :
+You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
+
+	npm install -g grunt-cli
+
+Download and install FOX Boilerplate files in the directory where you want to work. FOX Boilerplate is designed to be as less obtrusive as possible. Just install the Grunt dependencies above like this :
+
+	npm install <module> --save-dev
+
+ And run the following commands depending on what you want :
 
 * `grunt` will run the `watch` task, which includes the following: livereload, Sass files compilation, and autoprefix task
 * `grunt js` will run JSHint on your JavaScript files
-* `grunt min` will minify your CSS and JS files and will concatenate all your plugins into `main.js`. It will also optimize your png and jpg files.
+* `grunt min` will minify your CSS and JS files and will concatenate all your plugins into `main.js`. It will also optimize your PNG and JPG files.
+
+If you need more info on Grunt, you should take a look at Grunt's ["Getting Started" guide](http://gruntjs.com/getting-started).
 
 
 ## License

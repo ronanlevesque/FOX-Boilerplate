@@ -16,7 +16,7 @@ This Boilerplate is designed to be as less obtrusive as possible. FOX CSS is ins
 
 ## Installation
 
-You need to have [Node](http://nodejs.org/) and (Grunt)[http://gruntjs.com/] installed on your computer. If you don't, install Node from the website and install grunt with the command line :
+You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
 
 	npm install -g grunt-cli
 
@@ -53,7 +53,7 @@ Files should be placed in the following folders inside your project :
 
  Run the following commands depending on what you want :
 
-* `grunt` will run the `watch` task, which includes the following: livereload (requires the (Chrome plugin)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei], Sass files compilation, and autoprefix task
+* `grunt` will run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei), Sass files compilation, and autoprefix task
 * `grunt js` will run JSHint on your JavaScript files
 * `grunt min` will minify your CSS and JS files and will concatenate all your plugins into `main.js`. It will also optimize your PNG and JPG files.
 

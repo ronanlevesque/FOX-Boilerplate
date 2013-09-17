@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         },
         expand: true,
         cwd: 'css/sass/',
-        src: ['*.scss', '!_*.scss'],
+        src: ['**/*.scss', '!**/_*.scss'],
         dest: 'css/',
         ext: '.css'
       }
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
         tasks: ['sass:dist', 'autoprefixer:multiple_files']
       },
       html: {
-        files: ['*.html']
+        files: ['**/*.html']
       },
     }
 

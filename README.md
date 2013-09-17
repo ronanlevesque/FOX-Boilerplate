@@ -12,13 +12,15 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 
 And more to come.
 
+This Boilerplate is designed to be as less obtrusive as possible. FOX CSS is installed by default but you can start your project with your own framework or with just a blank CSS file.
+
 ## Installation
 
 You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
 
 	npm install -g grunt-cli
 
-Download and install FOX Boilerplate files in the directory where you want to work. FOX Boilerplate is designed to be as less obtrusive as possible. Just install the Grunt dependencies above like this :
+Download and install FOX Boilerplate files in the directory where you want to work. Just install the Grunt dependencies above like this :
 
 	npm install <module> --save-dev
 
@@ -34,7 +36,18 @@ Grunt dependencies for now :
 * `grunt-contrib-concat`
 * `matchdep`
 
-**IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/). 
+**IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/).
+
+## Files configuration
+
+Files should be placed in the following folders inside your project :
+
+* CSS : /css/
+* SCSS : /css/sass/..
+* JS files : /js/
+* JS plugins : /js/plugins/..
+* Images : /img/..
+* HTML files : anywhere
 
 ## Usage
 

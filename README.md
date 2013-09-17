@@ -1,6 +1,28 @@
 # FOX Boilerplate
 
-An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Grunt dependencies for now :
+An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Currently composed of the following :
+
+* HTML5 responsive base template
+* FOX CSS framework (Sass)
+* Sass & CSS3 Autoprefixer (compile on default task)
+* Livereload with Chrome plugin
+* JSHint
+* IE7&8 support (Modernizr HTML5 shiv & Respond.js)
+* Files minification (CSS, JS and images)
+
+And more to come.
+
+## Installation
+
+You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
+
+	npm install -g grunt-cli
+
+Download and install FOX Boilerplate files in the directory where you want to work. FOX Boilerplate is designed to be as less obtrusive as possible. Just install the Grunt dependencies above like this :
+
+	npm install <module> --save-dev
+
+Grunt dependencies for now :
 
 * `grunt-contrib-sass`
 * `grunt-autoprefixer`
@@ -12,29 +34,11 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Gru
 * `grunt-contrib-concat`
 * `matchdep`
 
-The Boilerplate is currently composed of the following :
-
-* HTML5 responsive base template
-* FOX CSS framework (Sass)
-* Sass & Autoprefixer (compile on default task)
-* Livereload with Chrome plugin
-* JSHint
-* IE7&8 support (Modernizr HTML5 shiv & Respond.js)
-* Files minification (CSS, JS and images)
-
-And more to come.
+*IMPORTANT* : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/). 
 
 ## Usage
 
-You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
-
-	npm install -g grunt-cli
-
-Download and install FOX Boilerplate files in the directory where you want to work. FOX Boilerplate is designed to be as less obtrusive as possible. Just install the Grunt dependencies above like this :
-
-	npm install <module> --save-dev
-
- And run the following commands depending on what you want :
+ Run the following commands depending on what you want :
 
 * `grunt` will run the `watch` task, which includes the following: livereload, Sass files compilation, and autoprefix task
 * `grunt js` will run JSHint on your JavaScript files
@@ -42,6 +46,9 @@ Download and install FOX Boilerplate files in the directory where you want to wo
 
 If you need more info on Grunt, you should take a look at Grunt's ["Getting Started" guide](http://gruntjs.com/getting-started).
 
+## Help
+
+If you need help, please [contact me](https://twitter.com/eskiiss) on Twitter.
 
 ## License
 

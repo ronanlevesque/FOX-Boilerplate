@@ -5,7 +5,7 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 * HTML5 responsive base template
 * FOX CSS framework (Sass)
 * Sass & CSS3 Autoprefixer (compile on default task)
-* Livereload with (Chrome plugin)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei]
+* Livereload with [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 * JSHint
 * IE7&8 support (Modernizr HTML5 shiv & Respond.js)
 * Files minification (CSS, JS and images)
@@ -16,7 +16,7 @@ This Boilerplate is designed to be as less obtrusive as possible. FOX CSS is ins
 
 ## Installation
 
-You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
+You need to have [Node](http://nodejs.org/) and (Grunt)[http://gruntjs.com/] installed on your computer. If you don't, install Node from the website and install grunt with the command line :
 
 	npm install -g grunt-cli
 

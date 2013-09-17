@@ -5,7 +5,7 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 * HTML5 responsive base template
 * FOX CSS framework (Sass)
 * Sass & CSS3 Autoprefixer (compile on default task)
-* Livereload with Chrome plugin
+* Livereload with (Chrome plugin)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei]
 * JSHint
 * IE7&8 support (Modernizr HTML5 shiv & Respond.js)
 * Files minification (CSS, JS and images)
@@ -53,7 +53,7 @@ Files should be placed in the following folders inside your project :
 
  Run the following commands depending on what you want :
 
-* `grunt` will run the `watch` task, which includes the following: livereload, Sass files compilation, and autoprefix task
+* `grunt` will run the `watch` task, which includes the following: livereload (requires the (Chrome plugin)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei], Sass files compilation, and autoprefix task
 * `grunt js` will run JSHint on your JavaScript files
 * `grunt min` will minify your CSS and JS files and will concatenate all your plugins into `main.js`. It will also optimize your PNG and JPG files.
 

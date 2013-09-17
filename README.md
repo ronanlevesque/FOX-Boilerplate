@@ -53,7 +53,7 @@ Files should be placed in the following folders inside your project :
 
  Run the following commands depending on what you want :
 
-* `grunt` will run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei), Sass files compilation, and autoprefix task
+* `grunt` will run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task
 * `grunt js` will run JSHint on your JavaScript files
 * `grunt min` will minify your CSS and JS files and will concatenate all your plugins into `main.js`. It will also optimize your PNG and JPG files.
 

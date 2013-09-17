@@ -34,7 +34,7 @@ Grunt dependencies for now :
 * `grunt-contrib-concat`
 * `matchdep`
 
-*IMPORTANT* : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/). 
+**IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/). 
 
 ## Usage
 

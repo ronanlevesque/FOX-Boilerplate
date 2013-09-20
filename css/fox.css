@@ -488,7 +488,8 @@ td {
   height: 0;
 }
 
-.grid li {
+.grid li,
+.grid div {
   display: inline-block;
 }
 
@@ -1049,7 +1050,8 @@ td {
 /*-------------------------*/
 
 .ie7 .inlineb,
-.ie7 .grid li {
+.ie7 .grid li,
+.ie7 .grid div {
   display: inline;
   zoom: 1;
 }

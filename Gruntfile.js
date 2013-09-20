@@ -1,11 +1,13 @@
 module.exports = function(grunt) {
 
-  // load all grunt tasks
+  // Load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+  // Tasks configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Sass configuration
     sass: {
       dist: {
         options: {
@@ -19,6 +21,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Auto prefix CSS3 properties
     autoprefixer: {
       multiple_files: {
         expand: true,
@@ -28,10 +31,12 @@ module.exports = function(grunt) {
       }
     },
 
+    // Run JSHint on JavaScript files
     jshint: {
       files: ['gruntfile.js', 'js/**/*.js', '!js/plugins/*.js']
     },
 
+    // Minify CSS
     csso: {
       multiple_files: {
         expand: true,
@@ -41,6 +46,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Minify images
     imagemin: {
       png: {
         options: {
@@ -72,6 +78,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Concatenate multiple JavaScript files
     concat: {
       options: {
         separator: ';'
@@ -83,6 +90,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Minify JavaScript
     uglify: {
       js: {
         files: {
@@ -91,6 +99,7 @@ module.exports = function(grunt) {
       }
     },
 
+    // Watch task - live reload on Sass & HTML changes
     watch: {
       options: {
         livereload: true
@@ -106,13 +115,13 @@ module.exports = function(grunt) {
 
   });
 
-  // default task
+  // Default task
   grunt.registerTask('default', 'watch');
 
-  // js testing task
+  // JavaScript testing task
   grunt.registerTask('js', 'jshint');
 
-  // minify and concat task
+  // Minify and concat task
   grunt.registerTask('min', ['csso', 'imagemin', 'concat', 'uglify']);
 
 };

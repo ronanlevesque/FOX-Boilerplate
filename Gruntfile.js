@@ -14,9 +14,9 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         expand: true,
-        cwd: 'css/sass/',
-        src: ['**/*.scss', '!**/_*.scss'],
-        dest: 'css/',
+        cwd: './css/sass/',
+        src: ['./**/*.scss', '!./**/_*.scss'],
+        dest: './css/',
         ext: '.css'
       }
     },
@@ -26,14 +26,14 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: 'css/*.css',
-        dest: 'css/'
+        src: './css/*.css',
+        dest: './css/'
       }
     },
 
     // Run JSHint on JavaScript files
     jshint: {
-      files: ['gruntfile.js', 'js/**/*.js', '!js/plugins/*.js']
+      files: ['gruntfile.js', './js/**/*.js', '!./js/plugins/*.js']
     },
 
     // Minify CSS
@@ -41,8 +41,8 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: 'css/*.css',
-        dest: 'css/'
+        src: './css/*.css',
+        dest: './css/'
       }
     },
 
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'js/main.js': ['js/plugins/**/*.js']
+          './js/main.js': ['./js/plugins/**/*.js']
         }
       }
     },
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         files: {
-          'js/main.js': ['js/main.js']
+          './js/main.js': ['./js/main.js']
         }
       }
     },
@@ -105,11 +105,11 @@ module.exports = function(grunt) {
         livereload: true
       },
       sass: {
-        files: ['css/sass/**/*.scss'],
+        files: ['./css/sass/**/*.scss'],
         tasks: ['sass:dist', 'autoprefixer:multiple_files']
       },
       html: {
-        files: ['**/*.html']
+        files: ['./**/*.html']
       },
     }
 

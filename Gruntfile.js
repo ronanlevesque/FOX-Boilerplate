@@ -148,10 +148,16 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['./dev/css/sass/**/*.scss'],
-        tasks: ['sass:dist', 'autoprefixer:multiple_files']
+        tasks: ['sass:dist', 'autoprefixer:multiple_files'],
+        options: {
+          livereload: false
+        }
+      },
+      css: {
+        files: ['./dev/css/*.css']
       },
       html: {
-        files: ['./dev/**/*.html']
+        files: ['./dev/**/*.html', './dev/**/*.php']
       }
     }
 

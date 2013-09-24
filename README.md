@@ -16,11 +16,15 @@ This Boilerplate is designed to be as less obtrusive as possible. FOX CSS is ins
 
 ## Installation
 
-You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt with the command line :
+You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt from the command line :
 
 	npm install -g grunt-cli
 
-Download and install FOX Boilerplate files in the directory where you want to work. Just install the Grunt dependencies above like this :
+You may need to run `sudo` depending on your OS, or run the command shell as an Admin (for Windows users).
+
+Download and install FOX Boilerplate files in the directory where you want to work. Just install the Grunt dependencies by clicking on install-dependencies.bat or install-dependencies.command depending on your OS.
+
+Alternatively, you can also run the following command :
 
 	npm install <module> --save-dev
 
@@ -30,32 +34,55 @@ Grunt dependencies for now :
 * `grunt-autoprefixer`
 * `grunt-csso`
 * `grunt-contrib-imagemin`
+* `grunt-contrib-htmlmin`
 * `grunt-contrib-watch`
 * `grunt-contrib-uglify`
 * `grunt-contrib-jshint`
 * `grunt-contrib-concat`
 * `matchdep`
 
-**IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/).
+**IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
 
 ## Files configuration
 
+FOX-Boilerplate is composed of two main folders :
+
+* dev
+* dist (created on deploy)
+
 Files should be placed in the following folders inside your project :
 
-* CSS : /css/
-* SCSS : /css/sass/..
-* JS files : /js/
-* JS plugins : /js/plugins/..
-* Images : /img/..
-* HTML files : anywhere
+* CSS : dev/css/
+* SCSS : dev/css/sass/..
+* JS files : dev/js/
+* JS plugins : dev/js/plugins/..
+* Images : dev/img/..
+* HTML files : anywhere inside /dev/
 
 ## Usage
 
- Run the following commands depending on what you want :
+Open the command line tool in your working folder. For Windows users, there are two easy ways to do so :
 
-* `grunt` will run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task
-* `grunt js` will run JSHint on your JavaScript files
-* `grunt min` will minify your CSS and JS files and will concatenate all your plugins into `main.js`. It will also optimize your PNG and JPG files.
+* Run cmd in the location bar
+* Or shift + right click in your folder and select "Open command window here" (or something equivalent)
+
+Run the following commands depending on what you want.
+
+### grunt
+
+`grunt` will run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task.
+
+### grunt jstest
+
+`grunt js` will run JSHint on your JavaScript files
+
+### grunt concat
+
+`grunt concat` will will concatenate all your plugins into `main.js`. This is a very important task to run since it will limit requests, thus improving pages performances.
+
+### grunt deploy
+
+`grunt deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS and HTML, uglify your JS and optimize your images (JPG and PNG) and place all these files inside a /dist/ folder which will respect your folder hierarchy.
 
 If you need more info on Grunt, you should take a look at Grunt's ["Getting Started" guide](http://gruntjs.com/getting-started).
 

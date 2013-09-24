@@ -14,9 +14,9 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         expand: true,
-        cwd: './css/sass/',
-        src: ['./**/*.scss', '!./**/_*.scss'],
-        dest: './css/',
+        cwd: './dev/css/sass/',
+        src: ['**/*.scss', '!**/_*.scss'],
+        dest: './dev/css/',
         ext: '.css'
       }
     },
@@ -26,14 +26,14 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: './css/*.css',
-        dest: './css/'
+        src: './dev/css/*.css',
+        dest: './dev/css/'
       }
     },
 
     // Run JSHint on JavaScript files
     jshint: {
-      files: ['gruntfile.js', './js/**/*.js', '!./js/plugins/*.js']
+      files: ['gruntfile.js', './dev/js/**/*.js', '!./dev/js/plugins/*.js', '!./dev/js/ie/*.js']
     },
 
     // Minify CSS
@@ -41,8 +41,8 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: './css/*.css',
-        dest: './css/'
+        src: './dev/css/*.css',
+        dest: './dist/css/'
       }
     },
 
@@ -55,9 +55,9 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: './img/',
+            cwd: './dev/img/',
             src: ['**/*.png'],
-            dest: './img/',
+            dest: './dist/img/',
             ext: '.png'
           }
         ]
@@ -69,10 +69,33 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: './img/',
+            cwd: './dev/img/',
             src: ['**/*.jpg'],
-            dest: './img/',
+            dest: './dist/img/',
             ext: '.jpg'
+          }
+        ]
+      }
+    },
+
+    // Minify HTML
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true,
+          removeEmptyAttributes: false,
+          removeComments: true,
+          removeCommentsFromCDATA: true,
+          removeRedundantAttributes: true,
+          collapseBooleanAttributes: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: './dev/',
+            src: ['**/*.html'],
+            dest: './dist/',
+            ext: '.html'
           }
         ]
       }
@@ -83,9 +106,9 @@ module.exports = function(grunt) {
       options: {
         separator: ';'
       },
-      dist: {
+      dev: {
         files: {
-          './js/main.js': ['./js/plugins/**/*.js']
+          './dev/js/main.js': ['./dev/js/plugins/**/*.js']
         }
       }
     },
@@ -93,9 +116,14 @@ module.exports = function(grunt) {
     // Minify JavaScript
     uglify: {
       js: {
-        files: {
-          './js/main.js': ['./js/main.js']
-        }
+        files: [
+          {
+            expand: true,
+            cwd: './dev/js/',
+            src: ['**/*.js'],
+            dest: './dist/js/'
+          }
+        ]
       }
     },
 
@@ -105,12 +133,12 @@ module.exports = function(grunt) {
         livereload: true
       },
       sass: {
-        files: ['./css/sass/**/*.scss'],
+        files: ['./dev/css/sass/**/*.scss'],
         tasks: ['sass:dist', 'autoprefixer:multiple_files']
       },
       html: {
-        files: ['./**/*.html']
-      },
+        files: ['./dev/**/*.html']
+      }
     }
 
   });
@@ -119,9 +147,12 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'watch');
 
   // JavaScript testing task
-  grunt.registerTask('js', 'jshint');
+  grunt.registerTask('jstest', 'jshint');
 
-  // Minify and concat task
-  grunt.registerTask('min', ['csso', 'imagemin', 'concat', 'uglify']);
+  // JavaScript concat task
+  grunt.registerTask('jsconcat', 'concat');
+
+  // Deployment tasks (minify and put files in 'dist' folder)
+  grunt.registerTask('deploy', ['csso', 'imagemin', 'htmlmin', 'uglify']);
 
 };

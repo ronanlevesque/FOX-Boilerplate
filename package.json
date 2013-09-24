@@ -1,6 +1,6 @@
 {
   "name": "FOX-Boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Boilerplate with Grunt and FOX CSS",
   "author": "Ronan Levesque",
   "devDependencies": {

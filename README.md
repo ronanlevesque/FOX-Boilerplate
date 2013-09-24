@@ -8,7 +8,8 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 * Livereload with [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
 * JSHint
 * IE7&8 support (Modernizr HTML5 shiv & Respond.js)
-* Files minification (CSS, JS and images)
+* Files minification (CSS, JS, HTML and images)
+* Works like a charm on a local server (tested with WAMP)
 
 And more to come.
 
@@ -39,6 +40,7 @@ Grunt dependencies for now :
 * `grunt-contrib-uglify`
 * `grunt-contrib-jshint`
 * `grunt-contrib-concat`
+* `grunt-contrib-copy`
 * `matchdep`
 
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
@@ -82,7 +84,7 @@ Run the following commands depending on what you want.
 
 ### grunt deploy
 
-`grunt deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS and HTML, uglify your JS and optimize your images (JPG and PNG) and place all these files inside a /dist/ folder which will respect your folder hierarchy.
+`grunt deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS and HTML, uglify your JS, optimize your images (JPG and PNG) and place all these files inside a /dist/ folder which will respect your folder hierarchy.
 
 If you need more info on Grunt, you should take a look at Grunt's ["Getting Started" guide](http://gruntjs.com/getting-started).
 

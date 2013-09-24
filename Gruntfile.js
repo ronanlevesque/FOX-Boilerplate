@@ -92,10 +92,24 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: './dev/',
+            cwd: './dist/',
             src: ['**/*.html'],
             dest: './dist/',
             ext: '.html'
+          }
+        ]
+      }
+    },
+
+    // Copy PHP and HTML files
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: './dev/',
+            src: ['**/*.html', '**/*.php'],
+            dest: './dist/'
           }
         ]
       }
@@ -153,6 +167,6 @@ module.exports = function(grunt) {
   grunt.registerTask('jsconcat', 'concat');
 
   // Deployment tasks (minify and put files in 'dist' folder)
-  grunt.registerTask('deploy', ['csso', 'imagemin', 'htmlmin', 'uglify']);
+  grunt.registerTask('deploy', ['csso', 'imagemin', 'copy', 'htmlmin', 'uglify']);
 
 };

@@ -37,11 +37,11 @@ module.exports = function(grunt) {
     },
 
     // Minify CSS
-    csso: {
-      multiple_files: {
+    cssmin: {
+      minify: {
         expand: true,
-        flatten: true,
-        src: './dev/css/*.css',
+        cwd: './dev/css/',
+        src: ['*.css', '!*.min.css'],
         dest: './dist/css/'
       }
     },
@@ -173,6 +173,6 @@ module.exports = function(grunt) {
   grunt.registerTask('jsconcat', 'concat');
 
   // Deployment tasks (minify and put files in 'dist' folder)
-  grunt.registerTask('deploy', ['csso', 'imagemin', 'copy', 'htmlmin', 'uglify']);
+  grunt.registerTask('deploy', ['cssmin', 'imagemin', 'copy', 'htmlmin', 'uglify']);
 
 };

@@ -33,7 +33,7 @@ Grunt dependencies for now :
 
 * `grunt-contrib-sass`
 * `grunt-autoprefixer`
-* `grunt-cssmin`
+* `grunt-contrib-cssmin`
 * `grunt-contrib-imagemin`
 * `grunt-contrib-htmlmin`
 * `grunt-contrib-watch`

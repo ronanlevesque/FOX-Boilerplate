@@ -76,7 +76,7 @@ Run the following commands depending on what you want.
 
 ### grunt jstest
 
-`grunt js` will run JSHint on your JavaScript files
+`grunt jstest` will run JSHint on your JavaScript files
 
 ### grunt concat
 

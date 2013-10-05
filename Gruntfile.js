@@ -35,15 +35,15 @@ module.exports = function(grunt) {
     // Full list available at http://www.jshint.com/docs/options/
     jshint: {
       options: {
-        curly: true;
-        eqeqeq: true;
-        latedef: true;
-        noarg: true;
-        undef: true;
-        unused: true;
-        eqnull: true;
-        browser: true;
-      }
+        curly: true,
+        eqeqeq: true,
+        latedef: true,
+        noarg: true,
+        undef: true,
+        unused: true,
+        eqnull: true,
+        browser: true
+      },
       files: ['gruntfile.js', './dev/js/**/*.js', '!./dev/js/plugins/*.js', '!./dev/js/ie/*.js']
     },
 

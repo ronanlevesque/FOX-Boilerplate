@@ -73,7 +73,7 @@ Run the following commands depending on what you want.
 
 ### grunt
 
-`grunt` will run a local server at localhost:1001 using `dev` folder as a root, and will also run the `watch` task, which includes the following: , livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task.
+`grunt` will run a local server at `localhost:1001` using `dev` folder as a root, and will also run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task.
 
 ### grunt jstest
 

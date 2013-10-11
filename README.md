@@ -9,7 +9,7 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 * JSHint
 * IE7&8 support (HTML5 shiv from Modernizr & Respond.js)
 * Files minification (CSS, JS, HTML and images)
-* Works like a charm on a local server (tested with WAMP)
+* Create a local server at `localhost:1001`
 
 And more to come.
 
@@ -41,6 +41,7 @@ Grunt dependencies for now :
 * `grunt-contrib-jshint`
 * `grunt-contrib-concat`
 * `grunt-contrib-copy`
+* `grunt-contrib-connect`
 * `matchdep`
 
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
@@ -72,7 +73,7 @@ Run the following commands depending on what you want.
 
 ### grunt
 
-`grunt` will run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task.
+`grunt` will run a local server at localhost:1001 using `dev` folder as a root, and will also run the `watch` task, which includes the following: , livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task.
 
 ### grunt jstest
 

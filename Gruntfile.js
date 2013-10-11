@@ -7,6 +7,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Local server configuration
+    connect: {
+      server: {
+        options: {
+          port: 1001,
+          base: 'dev'
+        }
+      }
+    },
+
     // Sass configuration
     sass: {
       dist: {
@@ -175,7 +185,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', 'watch');
+  grunt.registerTask('default', ['connect', 'watch']);
 
   // JavaScript testing task
   grunt.registerTask('jstest', 'jshint');

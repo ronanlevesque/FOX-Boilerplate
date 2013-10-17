@@ -1,5 +1,5 @@
 /*
-FOX CSS 1.2
+FOX CSS 2.0
 by Ronan Levesque - CC BY 3.0 license
 
 Credits:
@@ -12,11 +12,6 @@ Credits:
 /* +GLOBAL                 */
 
 /*-------------------------*/
-
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
 
 body {
   font-family: Arial, Helvetica, Sans-serif;
@@ -32,7 +27,6 @@ form {
 
 ul,
 ol {
-  margin: 1em 0;
   padding-left: 2em;
 }
 

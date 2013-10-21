@@ -17,7 +17,7 @@ This Boilerplate is designed to be as less obtrusive as possible. FOX CSS is ins
 
 ## Installation
 
-You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install grunt from the command line :
+You need to have [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/) installed on your computer. If you don't, install Node from the website and install Grunt from the command line :
 
 	npm install -g grunt-cli
 

@@ -9,12 +9,14 @@ Credits:
 
 /*-------------------------*/
 
-/* +GLOBAL                 */
+/* +RESET AND NORMALIZE    */
 
 /*-------------------------*/
 
 body {
   font-family: Arial, Helvetica, Sans-serif;
+  color: #000;
+  background: #fff;
 }
 
 html,
@@ -23,29 +25,6 @@ blockquote,
 form {
   margin: 0;
   padding: 0;
-}
-
-ul,
-ol {
-  padding-left: 2em;
-}
-
-ul {
-  list-style-type: square;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
-  display: block;
 }
 
 blockquote,
@@ -187,6 +166,15 @@ th {
   line-height: 1.5em;
 }
 
+ul,
+ol {
+  padding-left: 2em;
+}
+
+ul {
+  list-style-type: square;
+}
+
 code,
 div,
 p,
@@ -225,6 +213,12 @@ td {
   border-top: 1px solid #ccc;
 }
 
+.ellip {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .red-txt {
   color: #be1818;
 }
@@ -249,7 +243,8 @@ td {
   background: #333;
 }
 
-.dark:hover {
+.dark:hover,
+.dark:focus {
   background: #262626;
 }
 
@@ -257,7 +252,8 @@ td {
   background: #be1818;
 }
 
-.red:hover {
+.red:hover,
+.red:focus {
   background: #a71515;
 }
 
@@ -265,7 +261,8 @@ td {
   background: #d35400;
 }
 
-.orange:hover {
+.orange:hover,
+.orange:focus {
   background: #b94a00;
 }
 
@@ -273,7 +270,8 @@ td {
   background: #ddb705;
 }
 
-.yellow:hover {
+.yellow:hover,
+.yellow:focus {
   background: #c4a204;
 }
 
@@ -281,7 +279,8 @@ td {
   background: #27ae60;
 }
 
-.green:hover {
+.green:hover,
+.green:focus {
   background: #229955;
 }
 
@@ -289,7 +288,8 @@ td {
   background: #3498db;
 }
 
-.blue:hover {
+.blue:hover,
+.blue:focus {
   background: #258cd1;
 }
 
@@ -298,6 +298,20 @@ td {
 /* +LAYOUTS                */
 
 /*-------------------------*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -493,7 +507,7 @@ td {
 
 /*-------------------------*/
 
-@media screen and (min-width: 40.0625em) {
+@media screen and (min-width: 40em) {
   .r10 {
     width: 10%;
   }

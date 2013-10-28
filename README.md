@@ -42,6 +42,7 @@ Grunt dependencies for now :
 * `grunt-contrib-concat`
 * `grunt-contrib-copy`
 * `grunt-contrib-connect`
+ * `grunt-notify`
 * `matchdep`
 
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
@@ -88,6 +89,14 @@ Run the following commands depending on what you want.
 `grunt deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS and HTML, uglify your JS, optimize your images (JPG and PNG) and place all these files inside a /dist/ folder which will respect your folder hierarchy.
 
 If you need more info on Grunt, you should take a look at Grunt's ["Getting Started"](http://gruntjs.com/getting-started) guide.
+
+## Notifications
+
+FOX Boilerplate also comes with an optional notification system. In order to use it, you may need to install one of the following tools :
+
+* Growl (Mac and Windows)
+* Snarl (Windows)
+* Notify-Send (Linux)
 
 ## Help
 

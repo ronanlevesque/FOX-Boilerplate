@@ -17,6 +17,30 @@ module.exports = function(grunt) {
       }
     },
 
+    // Notifications
+    notify: {
+      server: {
+        options: {
+          message: 'Local server created at localhost:1001. Started watching...'
+        }
+      },
+      jsconcat: {
+        options: {
+          message: 'Main.js successfully created'
+        }
+      },
+      jstest: {
+        options: {
+          message: 'JS Hint finished'
+        }
+      },
+      deploy: {
+        options: {
+          message: 'Deployment successful'
+        }
+      }
+    },
+
     // Sass configuration
     sass: {
       dist: {
@@ -54,7 +78,7 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true
       },
-      files: ['gruntfile.js', './dev/js/**/*.js', '!./dev/js/plugins/*.js', '!./dev/js/ie/*.js']
+      files: ['./dev/js/**/*.js', '!./dev/js/plugins/*.js', '!./dev/js/ie/*.js']
     },
 
     // Minify CSS
@@ -185,15 +209,15 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.registerTask('default', ['connect', 'notify:server', 'watch']);
 
   // JavaScript testing task
-  grunt.registerTask('jstest', 'jshint');
+  grunt.registerTask('jstest', ['jshint', 'notify:jstest']);
 
   // JavaScript concat task
-  grunt.registerTask('jsconcat', 'concat');
+  grunt.registerTask('jsconcat', ['concat', 'notify:jsconcat']);
 
   // Deployment tasks (minify and put files in 'dist' folder)
-  grunt.registerTask('deploy', ['cssmin', 'imagemin', 'copy', 'htmlmin', 'uglify']);
+  grunt.registerTask('deploy', ['cssmin', 'imagemin', 'copy', 'htmlmin', 'uglify', 'notify:deploy']);
 
 };

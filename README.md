@@ -9,7 +9,8 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 * JSHint
 * IE7&8 support (HTML5 shiv from Modernizr & Respond.js)
 * Files minification (CSS, JS, HTML and images)
-* Create a local server at `localhost:1001`
+* Local server at `localhost:1001`
+* Notifications system
 
 And more to come.
 

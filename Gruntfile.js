@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
       jstest: {
         options: {
-          message: 'JS Hint finished'
+          message: 'JSHint finished'
         }
       },
       deploy: {

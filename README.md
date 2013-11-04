@@ -80,7 +80,7 @@ Run the following commands depending on what you want.
 
 ### grunt test
 
-`grunt jstest` will run JSHint on your JavaScript files and will also test your HTML and CSS files. You can also run each task separately with `grunt jshint`, `grunt csslint` and `grunt htmllint`.
+`grunt test` will run JSHint on your JavaScript files and will also test your HTML and CSS files. You can also run each task separately with `grunt jshint`, `grunt csslint` and `grunt htmllint`.
 
 ### grunt concat
 

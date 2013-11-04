@@ -6,9 +6,9 @@ An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Cur
 * FOX CSS framework (Sass)
 * Sass & CSS3 Autoprefixer (compile on default task)
 * Livereload with [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-* JSHint
-* IE7&8 support (HTML5 shiv from Modernizr & Respond.js)
-* Files minification (CSS, JS, HTML and images)
+* JSHint, CSS Lint and HTML Lint
+* IE7&8 support (HTML5 shiv & Respond.js)
+* Files minification (CSS, JS and images)
 * Local server at `localhost:1001`
 * Notifications system
 

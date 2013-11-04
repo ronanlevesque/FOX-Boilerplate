@@ -32,19 +32,20 @@ Alternatively, you can also run the following command :
 
 Grunt dependencies for now :
 
-* `grunt-contrib-sass`
-* `grunt-autoprefixer`
-* `grunt-contrib-cssmin`
-* `grunt-contrib-imagemin`
-* `grunt-contrib-htmlmin`
-* `grunt-contrib-watch`
-* `grunt-contrib-uglify`
-* `grunt-contrib-jshint`
-* `grunt-contrib-concat`
-* `grunt-contrib-copy`
-* `grunt-contrib-connect`
- * `grunt-notify`
-* `matchdep`
+* matchdep
+* grunt-contrib-connect
+* grunt-notify
+* grunt-contrib-sass
+* grunt-autoprefixer
+* grunt-contrib-watch
+* grunt-contrib-csslint
+* grunt-html
+* grunt-contrib-jshint
+* grunt-contrib-concat
+* grunt-contrib-cssmin
+* grunt-contrib-imagemin
+* grunt-contrib-uglify
+* grunt-contrib-copy
 
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
 
@@ -53,7 +54,7 @@ Grunt dependencies for now :
 FOX-Boilerplate is composed of two main folders :
 
 * dev
-* dist (created on deploy)
+* dist (created on 1st `deploy` task)
 
 Files should be placed in the following folders inside your project :
 
@@ -77,17 +78,17 @@ Run the following commands depending on what you want.
 
 `grunt` will run a local server at `localhost:1001` using `dev` folder as a root, and will also run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, and autoprefix task.
 
-### grunt jstest
+### grunt test
 
-`grunt jstest` will run JSHint on your JavaScript files
+`grunt jstest` will run JSHint on your JavaScript files and will also test your HTML and CSS files. You can also run each task separately with `grunt jshint`, `grunt csslint` and `grunt htmllint`.
 
 ### grunt concat
 
-`grunt concat` will will concatenate all your plugins into `main.js`. This is a very important task to run since it will limit requests, thus improving pages performances.
+`grunt concat` will concatenate all your plugins into `main.js`. This is a very important task to run since it will limit requests, thus improving pages performances.
 
 ### grunt deploy
 
-`grunt deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS and HTML, uglify your JS, optimize your images (JPG and PNG) and place all these files inside a /dist/ folder which will respect your folder hierarchy.
+`grunt deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS, uglify your JS, optimize your images (JPG and PNG) and will place all those files inside a /dist/ folder which will respect your folder hierarchy.
 
 If you need more info on Grunt, you should take a look at Grunt's ["Getting Started"](http://gruntjs.com/getting-started) guide.
 

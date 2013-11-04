@@ -29,9 +29,9 @@ module.exports = function(grunt) {
           message: 'Main.js successfully created'
         }
       },
-      jstest: {
+      test: {
         options: {
-          message: 'JSHint finished'
+          message: 'Tests finished'
         }
       },
       deploy: {
@@ -63,6 +63,16 @@ module.exports = function(grunt) {
         src: './dev/css/*.css',
         dest: './dev/css/'
       }
+    },
+
+    // CSS Lint
+    csslint: {
+      src: ['./dev/css/*.css']
+    },
+
+    // HTML Lint
+    htmllint: {
+      src: ['./dev/*.html']
     },
 
     // Run JSHint on JavaScript files
@@ -118,29 +128,6 @@ module.exports = function(grunt) {
             src: ['**/*.jpg'],
             dest: './dist/img/',
             ext: '.jpg'
-          }
-        ]
-      }
-    },
-
-    // Minify HTML
-    htmlmin: {
-      dist: {
-        options: {
-          collapseWhitespace: true,
-          removeEmptyAttributes: false,
-          removeComments: true,
-          removeCommentsFromCDATA: true,
-          removeRedundantAttributes: true,
-          collapseBooleanAttributes: true
-        },
-        files: [
-          {
-            expand: true,
-            cwd: './dist/',
-            src: ['**/*.html'],
-            dest: './dist/',
-            ext: '.html'
           }
         ]
       }
@@ -212,12 +199,12 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['connect', 'notify:server', 'watch']);
 
   // JavaScript testing task
-  grunt.registerTask('jstest', ['jshint', 'notify:jstest']);
+  grunt.registerTask('test', ['csslint', 'htmllint', 'jshint', 'notify:test']);
 
   // JavaScript concat task
   grunt.registerTask('jsconcat', ['concat', 'notify:jsconcat']);
 
   // Deployment tasks (minify and put files in 'dist' folder)
-  grunt.registerTask('deploy', ['cssmin', 'imagemin', 'copy', 'htmlmin', 'uglify', 'notify:deploy']);
+  grunt.registerTask('deploy', ['cssmin', 'imagemin', 'copy', 'uglify', 'notify:deploy']);
 
 };

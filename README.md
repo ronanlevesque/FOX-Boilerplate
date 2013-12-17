@@ -1,4 +1,4 @@
-# FOX Boilerplate
+# FOX Boilerplate [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 An HTML5 / Sass / Grunt Boilerplate including [FOX CSS](http://fox-css.com). Currently composed of the following :
 

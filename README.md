@@ -92,6 +92,10 @@ Run the following commands depending on what you want.
 
 If you need more info on Grunt, you should take a look at Grunt's ["Getting Started"](http://gruntjs.com/getting-started) guide.
 
+### grunt install-dependencies
+
+`grunt install-dependencies` will install and update your npm dependencies.
+
 ## Notifications
 
 FOX Boilerplate also comes with an optional notification system. In order to use it, you may need to install one of the following tools :

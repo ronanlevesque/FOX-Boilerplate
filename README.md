@@ -46,6 +46,7 @@ Grunt dependencies for now :
 * grunt-contrib-imagemin
 * grunt-contrib-uglify
 * grunt-contrib-copy
+* grunt-install-dependencies
 
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
 
